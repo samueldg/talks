@@ -265,6 +265,8 @@ def get_exchange_folder(exchange_name):
 
 Saved ~20% of execution time
 
+-----
+
 #### `@functools.lru_cache(maxsize=128, typed=False)`
 
 > Decorator to wrap a function with a memoizing callable that saves up to the `maxsize` most recent calls. It can save time when an expensive or I/O bound function is periodically called with the same arguments.
