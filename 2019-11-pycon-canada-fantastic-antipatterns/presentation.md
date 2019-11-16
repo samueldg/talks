@@ -99,7 +99,7 @@ Two major families:
 
 ## Sampling
 
-* Statistical, so approximate 
+* Statistical, so approximate
 * Not costly (can run in prod!)
     - Some CPU/cache overhead
 * No code changes, inspect a running program
@@ -170,7 +170,7 @@ def retry(action, args, kwargs, attempts=5):
         (action.__name__, args, kwargs)
     )
     for i in attempts:
-    	try:
+        try:
             action(*args, **kwargs)
         except:
             ... # Manage exceptions
@@ -232,7 +232,7 @@ What next?:
 ```python
 def get_exchange_folder(exchange_name):
     exchange_folder = os.path.join(
-    	DATA_ROOT, 'exchanges', exchange_name
+        DATA_ROOT, 'exchanges', exchange_name
     )
     ensure_directory(exchange_folder)
     return exchange_folder
@@ -257,11 +257,10 @@ def get_exchange_folder(exchange_name):
 +@lru_cache(maxsize=None)
  def get_exchange_folder(exchange_name):
      exchange_folder = os.path.join(
-     	DATA_ROOT, 'exchanges', exchange_name
+        DATA_ROOT, 'exchanges', exchange_name
      )
      ensure_directory(exchange_folder)
      return exchange_folder
-     
 ```
 
 Saved ~20% of execution time
@@ -315,6 +314,6 @@ Issues/PRs referenced:
 * [mozilla-releng/redo#51](https://github.com/mozilla-releng/redo/pull/51)
 * [enigmampc/catalyst#500](https://github.com/enigmampc/catalyst/issues/500)
 
-Slides: 
+Slides:
 
 * [samueldg/talks](https://github.com/samueldg/talks)
