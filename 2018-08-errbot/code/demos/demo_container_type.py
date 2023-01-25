@@ -11,16 +11,15 @@ import os.path
 
 
 CURRENT_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
-BLOCKCHAIN_FILENAME = 'blockchain.txt'
+BLOCKCHAIN_FILENAME = "blockchain.txt"
 BLOCKCHAIN_FILEPATH = os.path.join(CURRENT_DIR_PATH, BLOCKCHAIN_FILENAME)
 
 
 class BlockchainKeyValueStore:
-
     def __init__(self):
         if not os.path.isfile(BLOCKCHAIN_FILEPATH):
-            with open(BLOCKCHAIN_FILEPATH, 'w') as out_file:
-                out_file.write(json.dumps({}) + '\n')
+            with open(BLOCKCHAIN_FILEPATH, "w") as out_file:
+                out_file.write(json.dumps({}) + "\n")
 
         with open(BLOCKCHAIN_FILEPATH) as in_file:
             self._dict = json.load(in_file)
@@ -37,5 +36,5 @@ class BlockchainKeyValueStore:
         self.log()
 
     def log(self):
-        with open(BLOCKCHAIN_FILEPATH, 'a') as out_file:
-            out_file.write(json.dumps(self._dict) + '\n')
+        with open(BLOCKCHAIN_FILEPATH, "a") as out_file:
+            out_file.write(json.dumps(self._dict) + "\n")

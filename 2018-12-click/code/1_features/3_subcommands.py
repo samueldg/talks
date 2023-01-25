@@ -12,17 +12,17 @@ def pi():
 
 
 @math_utils.command()
-@click.argument('addends', type=click.INT, nargs=-1)
+@click.argument("addends", type=click.INT, nargs=-1)
 def add(addends):
     click.echo(sum(addends))
 
 
 @math_utils.command()
-@click.argument('x', type=click.INT)
-@click.option('--base', type=click.INT, default=math.e)
+@click.argument("x", type=click.INT)
+@click.option("--base", type=click.INT, default=math.e)
 def log(x, base):
     click.echo(math.log(x, base))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     math_utils()
