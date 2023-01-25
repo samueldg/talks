@@ -117,7 +117,7 @@ Two major families:
 
 ## What are flame graphs?
 
-* Visulization tools for profiler output.
+* Visualization tools for profiler output.
 * Gives a hierarchical representation of code paths and their relative sampling frequenecy.
 * Can be interactive.
 
