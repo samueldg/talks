@@ -3,7 +3,7 @@
 [samueldg/async-standups](https://github.com/samueldg/async-standups)
 
 > This tool helps you write, publish, and keep track of your async standup reports.
-> 
+>
 > The standup data will be saved and manipulated in YAML files, and published to Slack in Markdown format.
 
 -----
@@ -30,7 +30,7 @@
 Jinja == f-strings on steroids
 
 > Jinja is Beautiful
-> 
+>
 > -- Jinja Docs
 
 -----
@@ -136,6 +136,7 @@ def copy(edit):
             require_save=True,
         )
 ```
+
 -----
 
 #### How to have an executable for your script?
@@ -159,7 +160,7 @@ That's how we segue into...
 
 ### setuptools/`setup.py`
 
-----
+-----
 
 How to have an executable entrypoint for your script?
 
@@ -215,13 +216,14 @@ Examples:
 
 What I want:
 
-1.
+1. This code:
 
-```python
->>> import standup
->>> standup.__version__
-'0.0.1'
-```
+    ```python
+    >>> import standup
+    >>> standup.__version__
+    '0.0.1'
+    ```
+
 2. `version=...` in `setup()`
 3. Version defined in only one place.
 

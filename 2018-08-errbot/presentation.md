@@ -86,7 +86,7 @@ In this next section, we'll dive into nice Python standard library or language f
 
     > sam [11:07 PM]
     > !plugin reboad something
-    > 
+    >
     > errbot APP [11:07 PM]
     > Command "plugin" / "plugin reboad" not found.
     > Did you mean "!status plugins" or "!plugin reload" or "!plugin blacklist" or "!plugin config" ?

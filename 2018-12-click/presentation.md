@@ -17,10 +17,10 @@
 ### What is Click?
 
 > Click is a Python package for creating beautiful command line interfaces in a composable way with as little code as necessary. It’s the “Command Line Interface Creation Kit”. It’s highly configurable but comes with sensible defaults out of the box.
-> 
+>
 > It aims to make the process of writing command line tools quick and fun while also preventing any frustration caused by the inability to implement an intended CLI API.
 
-_Source: Click project page_
+Source: Click project page
 
 ---
 
@@ -95,7 +95,7 @@ Examples:
 
 * `git add debug.log sandstorm.mp3 meme.jpg`
 * `cp debug.log sandstorm.mp3 meme.jpg some_dir/`
-   - Note the subtle difference!
+    - Note the subtle difference!
 
 Passing `nargs=-1` to `click.argument()` will make your argument variadic. Note that there can only be one, for a given command.
 
@@ -174,7 +174,6 @@ This can be achieved via the `click.group` decorator or `click.Group` class.
 
 ### Input prompts
 
-
 * Passing `prompt=True` to `click.option` means that if the value is missing, it will be prompted.
 * `hide_input=True` can also be used to make what the user typed invisible in the console, which is useful for passwords.
 * You can also `click.prompt()` or `click.confirm()` at any point during the execution.
@@ -188,7 +187,6 @@ This can be achieved via the `click.group` decorator or `click.Group` class.
 * Handles unicode errors in the terminal
 * Works with Python 2 and 3.
 * Handles ANSI color codes, and proper formatting.
-
 
 `click.style` allows you to format the output text (color, bold, blinking, underline).
 
@@ -204,6 +202,7 @@ The `click.testing` module enables you to easily test your CLI, including the in
 * You can specify anything in the execution context (environment variables, terminal width, etc.)
 * An isolated file system is available, to test input/output without side-effects.
 * You can also emulate prompts.
+
 ---
 
 ### And more!
