@@ -1,4 +1,4 @@
-# Fantastic anti-patterns and where to find them: pinpointing performance bottlenecks :dragon:
+# Fantastic anti-patterns and where to find them: pinpointing performance bottlenecks 🐉
 
 -----
 
@@ -31,7 +31,7 @@
 
 -----
 
-## Expected :pray:
+## Expected 🙏
 
 ```sh
 python backtest.py --start=2016-01 --end=2018-01
@@ -42,11 +42,11 @@ Then:
 * Get a coffee
 * Wait ~5 minutes
 * Output: "Your strategy made 10x profits :chart_with_upwards_trend:!"
-	* Future crypto-millionaire :moneybag:
+    - Future crypto-millionaire :moneybag:
 
 -----
 
-## Actual :grimacing:
+## Actual 😬
 
 ```sh
 python backtest.py --start=2016-01 --end=2018-01
@@ -58,7 +58,7 @@ Then:
 * Wait ~1 hour
 * Coffee is cold
 * Output: "You lost 90% of your starting capital :chart_with_downwards_trend:"
-	* Future crypto-bankrupt :money_with_wings:
+    - Future crypto-bankrupt :money_with_wings:
 
 -----
 
@@ -70,9 +70,9 @@ Then:
     - Print statements with timing?
 * What if the bottleneck is in a third-party library?
 
-----
+-----
 
-# Solution: profiling, and flame graphs! :fire:
+# Solution: profiling, and flame graphs! 🔥
 
 -----
 
@@ -113,11 +113,12 @@ Two major families:
          --duration 600 \
          --rate 1000
   ```
+
 -----
 
 ## What are flame graphs?
 
-* Visulization tools for profiler output.
+* Visualization tools for profiler output.
 * Gives a hierarchical representation of code paths and their relative sampling frequenecy.
 * Can be interactive.
 
@@ -125,7 +126,7 @@ Two major families:
 
 ## How do you read a flame graph?
 
-----
+-----
 
 ![Flame graph example](assets/get_exchange_folder-after-zoomed.png)
 
@@ -135,7 +136,7 @@ Two major families:
 
 -----
 
-## What to look for:
+## What to look for
 
 * Large horizontal portions
 * Time spent in one function
@@ -191,7 +192,8 @@ def retry(action, args, kwargs, attempts=5):
 
 #### `debug(msg, *args, **kwargs)`
 
-> Logs a message with level `DEBUG` on this logger. The `msg` is the message format string, and the `args` are the arguments which are merged into msg using the string formatting operator. 
+> Logs a message with level `DEBUG` on this logger. The `msg` is the message format string, and the `args` are the arguments which are merged into msg using the string formatting operator.
+
 -----
 
 ### Solution: Lazy formatting in the `logging` standard library
@@ -212,7 +214,6 @@ Saved ~10% of execution time!
 Result of running `py-spy` after that fix:
 
 ![After redo fix](assets/redo-after.png)
-
 
 -----
 
@@ -273,16 +274,15 @@ Saved ~20% of execution time
 
 -----
 
-
 Result of running `py-spy` after both fixes:
 
-![](assets/get_exchange_folder-after.png)
+![get_exchange_folder-after](assets/get_exchange_folder-after.png)
 
 -----
 
 Zoom, enhance:
 
-![](assets/get_exchange_folder-after-zoomed.png)
+![get_exchange_folder-after-zoomed](assets/get_exchange_folder-after-zoomed.png)
 
 * `retry`: Almost no overhead
 * No more expensive folder check!
