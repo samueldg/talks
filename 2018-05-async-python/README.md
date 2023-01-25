@@ -10,11 +10,11 @@
 ## Concurrency Options
 
 * Multithreading.
-    - :-1: GIL.
+    - 👎 GIL.
 * Multiprocessing
-    - :-1: Overhead.
+    - 👎 Overhead.
 * Asynchronous IO
-    - :-1: Only appropriate for IO-bound workloads.
+    - 👎 Only appropriate for IO-bound workloads.
 
 ## Asynchronous IO in Python
 
@@ -34,11 +34,11 @@
 * [trio](https://trio.readthedocs.io/en/latest/)
 * [uvloop](https://github.com/MagicStack/uvloop)
 
-### `asyncio Overview
+### `asyncio` Overview
 
 * One event loop calling callbacks.
 * We want to maximize the use of a single thread.
-* When doing nothing, the loop is not "busy-looping". It uses OS primitives (SELECT, EPOLL, etc.) to be smart about what callback to call next.
+* When doing nothing, the loop is not "busy-looping". It uses OS primitives (`SELECT`, `EPOLL`, etc.) to be smart about what callback to call next.
 * You can spawn subprocesses.
 * There are built-in primitives:
     - [Synchronization](https://docs.python.org/3/library/asyncio-sync.html#synchronization-primitives)
@@ -64,14 +64,14 @@ Nuance Mix / NCS runtime sample application.
 * More readable than `yield from`
 * Allows using coroutines with generators more easily.
 
-### `asyncio.Queue
+### `asyncio.Queue`
 
 * Async equivalent of [`queue.Queue`](https://docs.python.org/3.6/library/queue.html#queue.Queue).
 * Has awaitable and non-awaitable access:
     - `get`/`put`
     - `get_nowait`/`put_nowait`
 
-### `asyncio.ensure_future
+### `asyncio.ensure_future`
 
 * Schedule something, and wrap in a `Future`.
 * Accepts any awaitable object.
