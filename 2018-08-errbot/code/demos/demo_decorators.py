@@ -1,6 +1,6 @@
 """Demo of the ability to set a function attribute from within a decorator.
 
-We simply tag some functions as "cool" or not, and canuse that information
+We simply tag some functions as "cool" or not, and can use that information
 later to act on these functions accordingly.
 """
 
