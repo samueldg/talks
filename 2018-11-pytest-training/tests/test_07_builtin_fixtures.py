@@ -13,8 +13,8 @@ def print_true_nature():
 def test_capsys(capsys):
     print_true_nature()
     captured = capsys.readouterr()
-    assert 'pot' in captured.out
-    assert captured.err == ''
+    assert "pot" in captured.out
+    assert captured.err == ""
 
 
 def test_caplog(caplog):
@@ -25,6 +25,6 @@ def test_caplog(caplog):
 
     for record in caplog.records:
         assert record.levelno == logging.DEBUG
-        assert record.levelname == 'DEBUG'  # Alternative
+        assert record.levelname == "DEBUG"  # Alternative
 
-    assert 'About to get an element' in caplog.text
+    assert "About to get an element" in caplog.text
