@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # Technical training: Python modules & packages
 
 ---
