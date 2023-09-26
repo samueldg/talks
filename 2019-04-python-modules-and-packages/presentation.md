@@ -25,10 +25,11 @@ Modular code is:
 * Scoped and namespaced
 
 > Namespaces are one honking great idea  let's do more of those!
-> 
+>
 > – Zen of Python
 
 ---
+
 ## What are modules and packages?
 
 ---
@@ -113,7 +114,7 @@ AttributeError: module 'http.client' has no attribute '__path__'
 
 And now those error messages make more sense:
 
-```
+```python
 >>> import http.woot
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -138,7 +139,7 @@ AttributeError: module 'http' has no attribute 'client'
 ```
 
 * Attribute access: Only names defined in the `*.py` file for a regular module and `__init__.py` for a package module.
-* Submodule access: Looks through the folder structure. 
+* Submodule access: Looks through the folder structure.
 
 ---
 
@@ -163,7 +164,6 @@ AttributeError: module 'http' has no attribute 'client'
 1. Interpreter searches for the module.
 2. Module is executed, the result of which is a namespace.
 3. This namespace is bound to a local name (in `locals`).
-
 
 ```python
 >>> from pprint import pprint
@@ -202,7 +202,7 @@ This guarantees initialization code and `atexit` hooks run only once.
 
 ---
 
-## Tips
+## Tips (1)
 
 * Avoid `import *`, except when that's really what you want, or sometimes in sample code, for conciseness.
 
@@ -213,8 +213,8 @@ This guarantees initialization code and `atexit` hooks run only once.
 1. Current directory
 2. Anything you put in `$PYTHONPATH`
 3. Multiple pre-defined paths (depends on the platform, the Python version, etc.)
-    * Those will include the standard lib and user-installed packages.
-    * Using virtualenvs ensure the isolation of these directories.
+    - Those will include the standard lib and user-installed packages.
+    - Using virtualenvs ensure the isolation of these directories.
 
 ```python
 >>> import sys
@@ -234,12 +234,12 @@ You can easily locate individual modules with `__file__`:
 >>> tox.__file__
 '/usr/local/lib/python3.7/site-packages/tox/__init__.py'
 ```
- 
+
 This can be useful to verify that you are loading the right code, look into the source code of a library, etc.
- 
+
 ---
 
-## Tips
+## Tips (2)
 
 * Don't manipulate `PYTHONPATH` or `sys.path` unless you really know what you're doing.
 * Avoid name conflicts with standard lib modules.
@@ -258,7 +258,6 @@ If only we had some sort of process isolation technology with a file system that
 ---
 
 Docker to the rescue! :whale:
-
 
 ```sh
 $ docker pull python:3.7-slim
@@ -283,7 +282,7 @@ $ docker run \
 
 And now, the prestige :tophat::
 
-```
+```sh
 $ docker diff py37-step2
 C /usr
 C /usr/local
@@ -323,7 +322,6 @@ a **copy** of the necessary source files will be added to your site-packages, av
 
 `setuptools` is the lower-lever library responsible for packaging, distribution and installation of Python projects. If you install a Python package, it will be called.
 
-
 `distutils` is an older alternative, that has been superseded but is still in the standard lib for legacy purposes.
 
 ---
@@ -351,16 +349,16 @@ Notable features:
 
 ## PyPI
 
-* Stands for <u>Py</u>thon <u>P</u>ackage <u>I</u>ndex
+* Stands for **Py**thon **P**ackage **I**ndex
 * Public repository of Python packages, which Pip installs from by default.
 
 ---
 
 ## `setup.py`? `requirements.txt`? `Pipfile`?
 
-* `Pipfile`: https://github.com/samueldg/async-standups/blob/f2deced69fec362b8554bae80b1ea07ad8f4cb63/Pipfile
-* `setup.py`: https://github.com/samueldg/async-standups/blob/f2deced69fec362b8554bae80b1ea07ad8f4cb63/setup.py
-* `requirements.txt`: https://github.com/xonsh/xonsh/blob/0.8.12/requirements-docs.txt
+* `Pipfile`: [example](https://github.com/samueldg/async-standups/blob/f2deced69fec362b8554bae80b1ea07ad8f4cb63/Pipfile)
+* `setup.py`: [example](https://github.com/samueldg/async-standups/blob/f2deced69fec362b8554bae80b1ea07ad8f4cb63/setup.py)
+* `requirements.txt`: [example](https://github.com/xonsh/xonsh/blob/0.8.12/requirements-docs.txt)
 
 ---
 
@@ -374,7 +372,7 @@ Notable features:
 
 ---
 
-## Also seen in the wild:
+## Also seen in the wild
 
 `setup.cfg`:
 
@@ -421,9 +419,10 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AttributeError: 'dict' object has no attribute 'dumps'
 ```
+
 ---
 
-## Tips
+## Tips (3)
 
 * `setup.py`should install your dependencies.
 * Try `python setup.py sdist` then `pip install -e $PACKAGE` to test setup.
@@ -434,13 +433,13 @@ AttributeError: 'dict' object has no attribute 'dumps'
 
 ## References
 
-* https://docs.python.org/3/reference/import.html
-* https://docs.python.org/3/glossary.html#term-package
-* https://docs.python.org/3/glossary.html#term-module
-* https://www.python.org/dev/peps/pep-0020/
-* https://realpython.com/python-modules-packages/
+* <https://docs.python.org/3/reference/import.html>
+* <https://docs.python.org/3/glossary.html#term-package>
+* <https://docs.python.org/3/glossary.html#term-module>
+* <https://www.python.org/dev/peps/pep-0020/>
+* <https://realpython.com/python-modules-packages/>
 
-* https://docs.python.org/3/library/inspect.html
+* <https://docs.python.org/3/library/inspect.html>
 
 * [pip](https://pip.pypa.io)
 * [Pipenv](https://docs.pipenv.org)
