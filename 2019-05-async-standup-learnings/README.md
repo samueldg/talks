@@ -4,4 +4,4 @@ Contents:
 
 * [Presentation](./presentation.md)
 
-Presentation slides can be generated using [Marp](https://yhatt.github.io/marp/).
+Presentation slides can be generated using [Marp](https://marp.app/).

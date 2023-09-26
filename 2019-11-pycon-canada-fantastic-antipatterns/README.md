@@ -5,4 +5,4 @@ Contents:
 * [Presentation (Markdown)](./presentation.md)
 * [Presentation (PDF)](./presentation.pdf)
 
-Presentation slides are generated using [Marp](https://github.com/marp-team/marp).
+Presentation slides are generated using [Marp](https://marp.app/).
