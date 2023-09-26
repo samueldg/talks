@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # Async Standup learnings
 
 [samueldg/async-standups](https://github.com/samueldg/async-standups)

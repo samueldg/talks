@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # Fantastic anti-patterns and where to find them: pinpointing performance bottlenecks 🐉
 
 -----
