@@ -1,5 +1,9 @@
 # [Sagard AI Bootcamp] Agent evals in practice
 
+Session from *The Efficient Frontier*, the Sagard AI bootcamp.
+
+<https://sagard-ai-bootcamp.lovable.app/>
+
 How we evaluate LLM agents at [Tilt](https://tilt.io): a compliance judge scoring
 every production turn, and a second judge that finds repetitive agent work worth
 compiling into deterministic workflows.
